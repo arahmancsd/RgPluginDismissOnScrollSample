@@ -12,6 +12,7 @@ namespace RgPluginDismissOnScrollSample
         }
         private void ScrollView_Scrolled(object sender, Xamarin.Forms.ScrolledEventArgs e)
         {
+            System.Diagnostics.Debug.WriteLine(e.ScrollY);
             // sample to close form when scroll down reaches certian limit
             if (e.ScrollY < 100)
             {

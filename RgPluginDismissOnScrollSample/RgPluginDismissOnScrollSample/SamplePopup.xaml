@@ -18,10 +18,11 @@
             HasBackgroundAnimation="True"/>
     </pages:PopupPage.Animation>
     <ScrollView Scrolled="ScrollView_Scrolled" VerticalOptions="End">
-        <Frame CornerRadius="10" IsClippedToBounds="True" VerticalOptions="FillAndExpand">
-            <StackLayout HeightRequest="300" VerticalOptions="Fill">
-                <Label Text="Hello" HorizontalOptions="Center"/>
-                <Button Text="Close" Clicked="Button_Clicked"/>
+        <Frame CornerRadius="10" IsClippedToBounds="True">
+            <StackLayout HeightRequest="300" VerticalOptions="FillAndExpand">
+                <Label Text="Welcome" HorizontalOptions="Center"/>
+                <Label Text="Scroll down to close dialog" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+                <Button Text="Close" VerticalOptions="End" Clicked="Button_Clicked"/>
             </StackLayout>
         </Frame>
     </ScrollView>

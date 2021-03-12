@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Rg.Plugins.Popup.Services;
+using System;
 using Xamarin.Forms;
 
 namespace RgPluginDismissOnScrollSample
@@ -14,10 +10,9 @@ namespace RgPluginDismissOnScrollSample
         {
             InitializeComponent();
         }
-
         private void Button_Clicked(object sender, EventArgs e)
         {
-
+            PopupNavigation.Instance.PushAsync(new SamplePopup());
         }
     }
 }
