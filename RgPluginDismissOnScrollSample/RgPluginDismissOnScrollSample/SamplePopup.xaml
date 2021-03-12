@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+                  HasSystemPadding="True"
+             CloseWhenBackgroundIsClicked="True"
+             x:Name="MyPage"
+             x:Class="RgPluginDismissOnScrollSample.SamplePopup">
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation 
+            PositionIn="Bottom"
+            PositionOut="Bottom"
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+    <ScrollView Scrolled="ScrollView_Scrolled" VerticalOptions="End">
+        <Frame CornerRadius="10" IsClippedToBounds="True" VerticalOptions="FillAndExpand">
+            <StackLayout HeightRequest="300" VerticalOptions="Fill">
+                <Label Text="Hello" HorizontalOptions="Center"/>
+                <Button Text="Close" Clicked="Button_Clicked"/>
+            </StackLayout>
+        </Frame>
+    </ScrollView>
+</pages:PopupPage>
